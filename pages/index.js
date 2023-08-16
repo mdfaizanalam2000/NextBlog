@@ -9,7 +9,7 @@ import Spinner from '@/components/Spinner'
 
 export default function Home() {
   const [blogs, setBlogs] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,21 +37,21 @@ export default function Home() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <Image src={slide1} className="d-block w-100" alt="..." />
+            <Image src={slide1} className="d-block w-100" alt="slide image" />
             <div className="carousel-caption d-none d-md-block">
               <h5>NextBlog</h5>
               <p>Thank you for checking out my blog website.</p>
             </div>
           </div>
           <div className="carousel-item">
-            <Image src={slide2} className="d-block w-100" alt="..." />
+            <Image src={slide2} className="d-block w-100" alt="slide image" />
             <div className="carousel-caption d-none d-md-block">
               <h5>Next Level Blogs</h5>
               <p>NextBlog contains awesome blogs on wide variety of topics.</p>
             </div>
           </div>
           <div className="carousel-item">
-            <Image src={slide3} className="d-block w-100" alt="..." />
+            <Image src={slide3} className="d-block w-100" alt="slide image" />
             <div className="carousel-caption d-none d-md-block">
               <h5>Initial Release</h5>
               <p>NextBlog is still under development and contains limited content for now.</p>
@@ -75,9 +75,9 @@ export default function Home() {
         <div className="row latest-section">
           {blogs.map((item) => {
             return (
-              <div className="col-md-4 mb-3">
+              <div className="col-md-4 mb-3" key={item.id}>
                 <div className="card">
-                  <img src={item.attributes.blogImg} className="card-img-top" alt="..." />
+                  <img src={item.attributes.blogImg} className="card-img-top" alt="blog image" />
                   <div className="card-body">
                     <h5 className="card-title">{item.attributes.title}</h5>
                     <h6 className="card-text">{item.attributes.description}</h6>
@@ -88,7 +88,7 @@ export default function Home() {
           })}
         </div>
         <div className="my-3 text-center">
-          <Link href={"/blogs"}>See all blogs</Link>
+          <Link href="/blogs">See all blogs</Link>
         </div>
       </div>}
     </>

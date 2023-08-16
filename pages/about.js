@@ -25,7 +25,7 @@ export default function about() {
                     <p className="lead">You can read blogs here anytime for free.</p>
                 </div>
                 <div className="col-md-5 order-md-1">
-                    <Image width={500} height={500} className="featurette-image img-fluid mx-auto" src={about2} />
+                    <Image width={500} height={500} className="featurette-image img-fluid mx-auto" src={about2} alt="Generic placeholder image" />
                 </div>
             </div>
 
@@ -37,7 +37,7 @@ export default function about() {
                     <p className="lead">This website is managed by <a target='_blank' href="https://mdfaizanalam.tech">mdfaizanalam.tech</a></p>
                 </div>
                 <div className="col-md-5">
-                    <Image width={500} height={500} className="featurette-image img-fluid mx-auto" src={about3} />
+                    <Image width={500} height={500} className="featurette-image img-fluid mx-auto" src={about3} alt="Generic placeholder image" />
                 </div>
             </div>
 
