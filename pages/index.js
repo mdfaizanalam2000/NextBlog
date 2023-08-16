@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const response = await fetch("https://strapi-backend-vhvp.onrender.com/api/blogs?filters[latest][$eq]=true");
+      const response = await fetch("https://strapi-backend-vhvp.onrender.com/api/blogs?sort=updatedAt:desc&pagination[limit]=3");
       const parsedData = await response.json();
       setLoading(false);
       setBlogs(parsedData.data);
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="row latest-section">
           {blogs.map((item) => {
             return (
-              <div className="col-md-4">
+              <div className="col-md-4 mb-3">
                 <div className="card">
                   <img src={item.attributes.blogImg} className="card-img-top" alt="..." />
                   <div className="card-body">

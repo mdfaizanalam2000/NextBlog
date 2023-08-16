@@ -15,7 +15,7 @@ export default function blogs() {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const response = await fetch("https://strapi-backend-vhvp.onrender.com/api/blogs");
+      const response = await fetch("https://strapi-backend-vhvp.onrender.com/api/blogs?sort=updatedAt:desc");
       const parsedData = await response.json();
       setLoading(false);
       setBlogs(parsedData.data);

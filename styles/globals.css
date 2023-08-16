@@ -69,4 +69,8 @@ footer {
     .blog-content {
         margin: 0 1rem 1rem 1rem;
     }
+
+    .d-none {
+        display: block !important;
+    }
 }
