@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Spinner() {
-    let [timer, setTimer] = useState(100);
+    let [timer, setTimer] = useState(60);
     setInterval(() => {
         setTimer(--timer);
     }, 1000)
