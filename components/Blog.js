@@ -11,8 +11,7 @@ export default function Blog(props) {
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
                 <button className="btn btn-primary" onClick={() => {
-                    localStorage.setItem("id", props.id)
-                    router.push('/readblog');
+                    router.push(`/blogs/${props.id}`);
                 }}>Read Blog</button>
                 <p className='text-muted'>Last Updated on: {new Date(updatedAt).toLocaleDateString()} at: {new Date(updatedAt).toLocaleTimeString()}</p>
             </div>
